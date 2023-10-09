@@ -1,0 +1,19 @@
+{
+  "name": "capri_poc",
+  "version": "1.0.0",
+  "description": "POC for LangChain based chatbot app for zoning ordinances in various cities/towns/municipalities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgbowser/capri_poc.git"
+  },
+  "author": "John Bowser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgbowser/capri_poc/issues"
+  },
+  "homepage": "https://github.com/jgbowser/capri_poc#readme"
+}
