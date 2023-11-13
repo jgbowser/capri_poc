@@ -5,6 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "docker:install": "./scripts/docker-install.sh",
+    "docker:psql": "PGOPTIONS='--search_path=capri-poc,public' PGPASSWORD='docker' psql -h localhost -U postgres -d capri-poc",
+    "docker:start": "docker start capri-poc-docker",
+    "docker:stop": "docker stop capri-poc-docker",
     "start": "tsc && node build/index.js"
   },
   "repository": {
