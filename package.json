@@ -16,17 +16,25 @@
   "scripts": {
     "docker:install": "./scripts/docker-install.sh",
     "docker:psql": "PGOPTIONS='--search_path=capri-poc,public' PGPASSWORD='docker' psql -h localhost -U postgres -d capri-poc",
+    "docker:rebuild": "./scripts/rebuild-db.sh",
     "docker:start": "docker start capri-poc-docker",
     "docker:stop": "docker stop capri-poc-docker",
+    "embed": "tsc && node build/createEmbeddings.js",
+    "migrate:latest": "knex migrate:latest",
+    "seed": "knex seed:run",
     "start": "tsc && node build/index.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
+    "knex": "^3.0.1",
     "langchain": "^0.0.189",
-    "openai": "^4.19.0"
+    "openai": "^4.19.0",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.11.3"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
+    "@types/pg": "^8.10.9",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "eslint": "^8.53.0",
