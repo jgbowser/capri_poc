@@ -6,6 +6,8 @@ import { PromptTemplate } from 'langchain/prompts';
 
 import { pgvectorStore } from './vectorStore.js';
 
+import type { ChainValues } from 'langchain/schema';
+
 // Configure our chosen LLM. In this case, we're using GPT-3.5 Turbo with no temperature.
 const llm = new OpenAI({
   modelName: 'gpt-4-1106-preview',
@@ -20,15 +22,16 @@ provide that information for the purposes of further research.
 Question: {question}
 Helpful Answer:`;
 
-// Create a QA Chain with our template and LLM
-const chain = RetrievalQAChain.fromLLM(llm, pgvectorStore.asRetriever(), {
-  prompt: PromptTemplate.fromTemplate(template),
-});
+export async function queryDocuments(question: string): Promise<ChainValues> {
+  // Create a QA Chain with our template and LLM
+  const chain = RetrievalQAChain.fromLLM(llm, pgvectorStore.asRetriever(), {
+    prompt: PromptTemplate.fromTemplate(template),
+  });
+  // Put the chain into action by asking it a question
+  const response = await chain.call({
+    query: question,
+  });
 
-const response = await chain.call({
-  query: 'Can I open a weed shop in Oyster Bay?',
-});
-
-pgvectorStore.end();
-
-console.log(response);
+  pgvectorStore.end();
+  return response;
+}
