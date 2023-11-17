@@ -39,4 +39,7 @@ export PGPASSWORD=$DB_PASSWORD
 dropdb --if-exists -h 0.0.0.0 -p ${PORT} -U postgres ${DATABASE_NAME}
 createdb -h 0.0.0.0 -p ${PORT} -U postgres ${DATABASE_NAME}
 
+npm run migrate:latest;
+npm run seed;
+
 echo "and now ${DATABASE_NAME} DB is ready to rock!"
