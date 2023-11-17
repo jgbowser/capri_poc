@@ -1,0 +1,113 @@
+/* Basic CSS Reset */
+
+/* Box sizing border-box reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+li,
+figure,
+figcaption,
+blockquote,
+fieldset,
+legend,
+button,
+input,
+textarea,
+pre,
+code,
+address {
+	margin: 0;
+	padding: 0;
+}
+
+/* Reset heading elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/* Reset form elements */
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	font: inherit;
+}
+
+/* Normalize vertical alignment of progress bars and textareas */
+progress {
+	vertical-align: baseline;
+}
+
+/* Reset some commonly used elements to improve cross-browser consistency */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+/* Remove outline on active elements */
+a,
+button,
+input,
+select,
+textarea {
+	outline: none;
+}
+
+/* Remove default border and padding on images */
+img {
+	border: 0;
+	padding: 0;
+}
+
+/* Responsive images */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Set the default font family and size */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+/* Optionally add more styles based on your specific needs */

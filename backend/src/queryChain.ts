@@ -32,6 +32,6 @@ export async function queryDocuments(question: string): Promise<ChainValues> {
     query: question,
   });
 
-  pgvectorStore.end();
+  // pgvectorStore.end();
   return response;
 }
