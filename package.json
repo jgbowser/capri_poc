@@ -19,7 +19,7 @@
     "docker:rebuild": "./scripts/rebuild-db.sh",
     "docker:start": "docker start capri-poc-docker",
     "docker:stop": "docker stop capri-poc-docker",
-    "embed": "tsc && node build/createEmbeddings.js",
+    "embed": "tsc && node build/utils/createEmbeddings.js",
     "migrate:latest": "knex migrate:latest",
     "seed": "knex seed:run",
     "start": "tsc && node build/index.js"
