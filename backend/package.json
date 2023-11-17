@@ -1,7 +1,7 @@
 {
-  "name": "capri_poc",
+  "name": "capri_poc_backend",
   "version": "1.0.0",
-  "description": "POC for LangChain based chatbot app for zoning ordinances in various cities/towns/municipalities",
+  "description": "POC for LangChain based chatbot app for zoning ordinances in various cities/towns/municipalities - Backend",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iinteractive/capri_poc.git"
